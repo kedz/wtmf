@@ -40,6 +40,7 @@ class WTMFVectorizer(object):
             WTMFTransformer(
                 k=self.k, w_m=self.w_m, lam=self.lam, 
                 max_iter=self.max_iter, verbose=self.verbose).fit(X)
+        return self
 
     def transform(self, X):
         if self.input == u'file':
